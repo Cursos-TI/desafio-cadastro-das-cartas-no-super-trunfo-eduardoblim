@@ -6,27 +6,37 @@
 //Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    int carta = 1;
-    char codigo[20]= "c01";
-    char estado[10] = "ceara";
-    char cidade[20] = "fortaleza";
-    int populacao = 2.428708;
-    float areaemkm = 312.441;
-    float pib = 73.000000000;
-    int pontosturisticos=15;
-    // Exibição dos Dados das Cartas:
+    // abaixp estao as variáveis separadas para cada atributo das cartas.
+    char estado[50];
+    char cidade[50];
+    float areakm;
+    float pib;
+    int pontosturisticos;
+    int carta;
+    // Exibiçao dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-     printf("carta:%d\n", carta);
-     printf("codigo: %s\n", codigo);
+
+     printf("digite o estado:\n");
+     scanf("%s", estado);
+
+     printf("digite a cidade:\n");
+     scanf("%s", cidade);
+
+     printf("digite a area em km:\n");
+     scanf("%f", &areakm);
+
+     printf("digite o pib:\n");
+     scanf("%f", &pib);
+
+     printf("digite pontos turisticos:\n");
+     scanf("%d", &pontosturisticos);
+
      printf("estado: %s\n", estado);
      printf("cidade: %s\n", cidade);
-     printf ("populacao: %d\n", populacao);
-     printf("area em km: %.3f\n", areaemkm);
-     printf("pib: %.9f\n", pib);
-     printf("pontos turisticos: %d\n", pontosturisticos);
-
+     printf("area em km: %.3f\n",areakm);
+     printf("pib: %f\n",pib);
+     printf("pontos turisticos: %d\n",pontosturisticos);
 
 
      return 0;
