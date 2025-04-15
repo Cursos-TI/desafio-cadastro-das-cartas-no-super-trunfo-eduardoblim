@@ -84,11 +84,12 @@ int main(){
    scanf("%f", &area2);
 
    printf("digite o pib 2:\n");
-   scanf("%F",& pib2);
+   scanf("%F", &pib2);
 
    printf("digite o numero de pontos turisticos da cidade 2:\n");
    scanf("%d", &numerodepontosturisticosdacidade2);
 
+   
    printf("__________carta 2__________\n");
    printf("estado 2: %s\n", estado2);
    printf("codigo da carta 2: %s\n", codigodacarta2);
