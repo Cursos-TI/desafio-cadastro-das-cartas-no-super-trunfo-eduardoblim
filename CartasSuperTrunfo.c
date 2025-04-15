@@ -16,7 +16,7 @@ int main(){
    // Siga os comentários para implementar cada parte do desafio.
    //Teste larissa
    
-     // abaixp estao as variáveis separadas para cada atributo das cartas.
+     // abaixo estao as variáveis separadas para cada atributo da carta 1.
 
 
        char estado[50];
@@ -27,7 +27,17 @@ int main(){
        float pib;
        int numerodepontosturisticos;
 
-   
+       char estado2[50];
+       char codigodacarta2[50];
+       char cidade2[50];
+       float populacao2;
+       float area2;
+       float pib2;
+       int numerodepontosturisticosdacidade2;
+
+
+;  
+    
      printf("digite o estado:\n");
      scanf("%s", estado);
 
@@ -49,7 +59,7 @@ int main(){
      printf("digite pontos turisticos:\n");
      scanf("%d", &numerodepontosturisticos);
    
-     
+     printf("__________carta 1__________\n");
      printf("estado: %s\n", estado);
      printf("codigo da carta: %s\n", codigodacarta);
      printf("cidade: %s\n", cidade);
@@ -57,8 +67,39 @@ int main(){
      printf("area em km: %.4f\n",areaemkm);
      printf("pib: %f\n",pib);
      printf("pontos turisticos:%d\n",numerodepontosturisticos);
-    
 
-     return 0;
- }
+    printf("digite o estado 2:\n");
+    scanf("%s", estado2);
+
+   printf("digite o codigo da carta 2:\n");
+   scanf("%s", codigodacarta2);
+
+   printf("digite a cidade 2:\n");
+   scanf("%s", cidade2);
+
+   printf("digite a populacao 2:\n");
+   scanf("%f", &populacao2);
+
+   printf("digite a area 2:\n");
+   scanf("%f", &area2);
+
+   printf("digite o pib 2:\n");
+   scanf("%F",& pib2);
+
+   printf("digite o numero de pontos turisticos da cidade 2:\n");
+   scanf("%d", &numerodepontosturisticosdacidade2);
+
+   printf("__________carta 2__________\n");
+   printf("estado 2: %s\n", estado2);
+   printf("codigo da carta 2: %s\n", codigodacarta2);
+   printf("cidade 2: %s\n", cidade2);
+   printf("populacao 2: %f\n", populacao2);
+   printf("area 2:%.3f\n", area2);
+   printf("pib 2: %f\n", pib2);
+   printf("numero de pontos turisticos da cidade 2: %d\n", numerodepontosturisticosdacidade2);
+
+
+   return 0;
+
+}
 
