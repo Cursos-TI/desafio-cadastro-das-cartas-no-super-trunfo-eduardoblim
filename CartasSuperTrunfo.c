@@ -22,6 +22,7 @@ int main(){
        float pib1;
        int numerodepontosturisticos1;
 
+      float pibpercapita1;
        // abaixo estao as variaveis e os nome para cada atributo da carta 2.
 
        char estado2;
@@ -32,7 +33,7 @@ int main(){
        float pib2;
        int numerodepontosturisticos2;
 
-
+      
 ;  // abaixo estao os printf para ser digitados os dados da carta 1.
   // abaixo estao os scanf para ler os dados fornecidos pelo usuario para a carta 1. 
     
@@ -58,6 +59,14 @@ int main(){
    
      printf("digite pontos turisticos 1:\n");
      scanf("%d", &numerodepontosturisticos1);
+
+     pibpercapita1 = (float) (pib1 / populacao1);
+
+    printf("digite o pib:\n ");
+    scanf("%f", &pib1);
+
+    printf("digite a populacao:\n");
+    scanf("%d", &populacao1);
 
 
      // abaixo estao os printf para ser digitado os dados da carta 2.
@@ -97,6 +106,9 @@ int main(){
    printf("area em km: %.3f\n",areaemkm1);
    printf("pib: %f\n",pib1);
    printf("numero de pontos turusticos da cidade 1: %d\n", numerodepontosturisticos1);
+   
+   printf("o pib per capita: %.2f\n", pibpercapita1);
+
 
   // abaixo estao os printf da carta 2 para serem exibidos os dados da carta 2 na tela.
  
