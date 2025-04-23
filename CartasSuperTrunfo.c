@@ -22,7 +22,7 @@ int main(){
        float pib1;
        int numerodepontosturisticos1;
 
-       // abaixo estao as variaveis e os para cada atributo da carta 2.
+       // abaixo estao as variaveis e os nome para cada atributo da carta 2.
 
        char estado2;
        char codigodacarta2[50];
@@ -33,13 +33,13 @@ int main(){
        int numerodepontosturisticos2;
 
 
-;  // abaixo estao os printf para ser fornecidas as informacoes da carta 1.
+;  // abaixo estao os printf para ser digitados os dados da carta 1.
   // abaixo estao os scanf para ler os dados fornecidos pelo usuario para a carta 1. 
     
      printf("carta 1! \n");
 
      printf("informe um estado de A a H !: \n");
-     scanf("%c", &estado1);
+     scanf(" %c", &estado1);
 
      printf("digite a letra de um estado seguinte de um numero exe:(A01,B03); \n");
      scanf("%s", codigodacarta1);
@@ -59,16 +59,14 @@ int main(){
      printf("digite pontos turisticos 1:\n");
      scanf("%d", &numerodepontosturisticos1);
 
-     // abaixo estao os printf da carta 1 para serem exibidas as informacoes da carta 1 na tela.
 
-
-     // abaixo estao os printf para ser fornecidas as informacoes da carta 2.
+     // abaixo estao os printf para ser digitado os dados da carta 2.
     //  abaixo estao os scanf para ler os dados fornecidos pelo usuario para carta 2 .
 
    printf("carta 2! \n");
 
    printf("informe um estado de A a H !: \n");
-   scanf("%c", &estado2);
+   scanf(" %c", &estado2);
 
    printf("digite a letra de um estado seguido de um numero exe:(A01,B03); \n" );
    scanf("%s", codigodacarta2);
@@ -88,24 +86,29 @@ int main(){
    printf("digite o numero de pontos turisticos da cidade 2:\n");
    scanf("%d", &numerodepontosturisticos2);
 
-   // abaixo estao os printf da carta 2 para serem exibidas as informacoes da carta 2 na tela.
+   // abaixo estao os printf da carta 1 para serem exibidas os dados da carta 1 na tela.
    
-   printf("estado 1: %c\n", estado1);
-   printf("codigo da carta 1: %s\n", codigodacarta1);
-   printf("cidade 1: %s\n", cidade1);
-   printf("populacao 1: %d\n", populacao1);
-   printf("area em km 1: %.2f\n",areaemkm1);
-   printf("pib 1: %.2f\n",pib1);
+  printf("\n dados da carta 1 \n");
+
+   printf("estado: %c\n", estado1);
+   printf("codigo da carta: %s\n", codigodacarta1);
+   printf("cidade: %s\n", cidade1);
+   printf("populacao: %d\n", populacao1);
+   printf("area em km: %.3f\n",areaemkm1);
+   printf("pib: %f\n",pib1);
    printf("numero de pontos turusticos da cidade 1: %d\n", numerodepontosturisticos1);
 
+  // abaixo estao os printf da carta 2 para serem exibidos os dados da carta 2 na tela.
+ 
+   printf("\n dados da carta 2 \n");
 
-   printf("estado 2: %c\n", estado2);
-   printf("codigo da carta 2: %s\n", codigodacarta2);
-   printf("cidade 2: %s\n", cidade2);
-   printf("populacao 2: %d\n", populacao2);
-   printf("area 2:%.3f\n", area2);
-   printf("pib 2: %f\n", pib2);
-   printf("numero de pontos turisticos da cidade 2: %d\n", numerodepontosturisticos2);
+   printf("estado: %c\n", estado2);
+   printf("codigo da carta: %s\n", codigodacarta2);
+   printf("cidade: %s\n", cidade2);
+   printf("populacao: %d\n", populacao2);
+   printf("area: %.3f\n", area2);
+   printf("pib: %f\n", pib2);
+   printf("numero de pontos turisticos da cidade: %d\n", numerodepontosturisticos2);
 
 
    return 0;
