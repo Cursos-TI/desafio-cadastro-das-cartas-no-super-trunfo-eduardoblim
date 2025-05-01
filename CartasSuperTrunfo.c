@@ -181,9 +181,27 @@ int main(){
 
    printf("escolha uma atributo para ser comparado:\n");
 
-   printf("7. super poder\n");
+  
 
+   printf("1. populacao\n");
    scanf("%d", &atributocomparacao);
+   printf("7. superpoder\n");
+   scanf("%d", &atributocomparacao);
+   
+
+   switch (atributocomparacao) {
+
+    case 1:
+          printf("super poder\n");
+          if (populacao1 > populacao2)
+          printf("a carta 1 tem maior populacao!\n");
+          else if (populacao2 > populacao1)
+          printf("a carta 2 tem maior populacao!\n");
+          else{
+           printf("as duas cartas tem a mesmo populacao!\n");
+    }
+
+   }
 
    switch (atributocomparacao) {
    
