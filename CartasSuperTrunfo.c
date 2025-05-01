@@ -23,8 +23,9 @@ int main(){
        int numerodepontosturisticos1;
        float densidadepopulacional1;
        float pibpercapita1;
-       float inversodensidadepop1;
+       float inversodensidadepopulacional1;
        long double superpoder1;
+
        // abaixo estao as variaveis e os nome para cada atributo da carta 2.
 
        char estado2;
@@ -36,8 +37,9 @@ int main(){
        int numerodepontosturisticos2;
        float densidadepopulacional2;
        float pibpercapita2;
-       float inversodensidadepop2;
+       float inversodensidadepopulacional2;
        long double superpoder2;
+       int atributocomparacao;
 
       
 ;  // abaixo estao os printf para ser digitados os dados da carta 1.
@@ -74,11 +76,11 @@ int main(){
 
 
 
-     inversodensidadepop1 = (densidadepopulacional1 > 0)?(1/densidadepopulacional1): 0;
+     inversodensidadepopulacional1 = (densidadepopulacional1 > 0)?(1/densidadepopulacional1): 0;
 
 
      superpoder1 = populacao1 + area1 + pib1 + (float)numerodepontosturisticos1 + 
-     pibpercapita1 + inversodensidadepop1;
+     pibpercapita1 + inversodensidadepopulacional1;
 
 
 
@@ -115,11 +117,11 @@ int main(){
    pibpercapita2 = (float) (pib2 / populacao2);
 
 
-   inversodensidadepop2 = (densidadepopulacional2 > 0)? (1/densidadepopulacional2): 0;
+   inversodensidadepopulacional2 = (densidadepopulacional2 > 0)? (1/densidadepopulacional2): 0;
 
 
    superpoder2 = populacao2 + area2 + pib2 + (float)numerodepontosturisticos2 +
-   pibpercapita2 + inversodensidadepop2;
+   pibpercapita2 + inversodensidadepopulacional2;
 
   
    // abaixo estao os printf da carta 1 para serem exibidas os dados da carta 1 na tela.
@@ -144,7 +146,7 @@ int main(){
 
    printf("o pib per capita e: %.2f reais\n", pibpercapita1);
 
-   printf("super poder: %.3Lf\n", superpoder1);
+   printf("super poder: %.3Lf pontos\n", superpoder1);
 
 
 
@@ -170,10 +172,38 @@ int main(){
 
    printf("o pib per capita e: %.2f reais\n", pibpercapita2);
 
-   printf("super poder : %3Lf\n", superpoder2);
+   printf("super poder: %3.Lf pontos\n", superpoder2);
+
+
+
+
+   // logica de combate entre carta1 e carta2;
+
+   printf("escolha uma atributo para ser comparado:\n");
+
+   printf("7. super poder\n");
+
+   scanf("%d", &atributocomparacao);
+
+   switch (atributocomparacao) {
+   
+    case 7:
+          printf("super poder\n");
+          if (superpoder1 > superpoder2)
+          printf("a carta 1 tem maior super poder!\n");
+          else if (superpoder2 > superpoder1)
+          printf("a carta 2 tem maior super poder!\n");
+          else{
+          printf("as duas cartas tem o mesmo super poder!\n");
+          }
+        
+        
+}
+   
 
 
    return 0;
 
 }
 
+ 
