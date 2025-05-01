@@ -50,7 +50,7 @@ int main(){
      printf("informe um estado de A a H !: \n");
      scanf(" %c", &estado1);
 
-     printf("digite a letra de um estado seguinte de um numero exe:(A01,B03); \n");
+     printf("digite a letra de um estado seguinte de um numero exe:(A01,B03): \n");
      scanf(" %s", codigodacarta1);
 
      printf("digite o nome da cidade 1:\n");
@@ -92,7 +92,7 @@ int main(){
    printf("informe um estado de A a H !: \n");
    scanf(" %c", &estado2);
 
-   printf("digite a letra de um estado seguido de um numero exe:(A01,B03); \n" );
+   printf("digite a letra de um estado seguido de um numero exe:(A01,B03): \n" );
    scanf(" %s", codigodacarta2);
 
    printf("digite a cidade 2:\n");
@@ -181,18 +181,20 @@ int main(){
 
    printf("escolha uma atributo para ser comparado:\n");
 
-  
-
    printf("1. populacao\n");
-   scanf("%d", &atributocomparacao);
-   printf("7. superpoder\n");
-   scanf("%d", &atributocomparacao);
+   printf("2. area\n");
+   printf("3. pontosturisticos\n");
+   printf("4. densidadepopulacional\n");
+   printf("5. pibpercapita\n");
+   printf("6. superpoder\n");
+
    
+   scanf(" %d", &atributocomparacao);
 
    switch (atributocomparacao) {
 
     case 1:
-          printf("super poder\n");
+          printf("populacao\n");
           if (populacao1 > populacao2)
           printf("a carta 1 tem maior populacao!\n");
           else if (populacao2 > populacao1)
@@ -202,10 +204,73 @@ int main(){
     }
 
    }
+   
+              
+   switch (atributocomparacao) {
+   
+    case 2:
+          printf("area\n");
+          if (area1 > area2)
+          printf("a carta 1 tem maior area!\n");
+          else if (area2 > area1)
+          printf("a carta 2 tem maior arae!\n");
+          else{
+          printf("as duas cartas tem a mesma area!\n");
+          }
+        
+        
+}
+
+switch (atributocomparacao) {
+   
+  case 3:
+        printf("numero de pontos turisticos\n");
+        if (numerodepontosturisticos1 > numerodepontosturisticos2)
+        printf("a carta 1 tem maior pontos turisticos!\n");
+        else if (numerodepontosturisticos2 > numerodepontosturisticos1)
+        printf("a carta 2 tem mais pontos turisticos!\n");
+        else{
+        printf("as duas cartas tem o mesmo numero de pontos turisticos!\n");
+        }
+        
+}
+
+
+switch (atributocomparacao) {
+   
+  case 4:
+        printf("densidade populacional\n");
+        if (densidadepopulacional1 > densidadepopulacional2)
+        printf("a carta 1 tem maior densidade populacional!\n");
+        else if (densidadepopulacional2 > densidadepopulacional1)
+        printf("a carta 2 tem maior densidadepopulacional!\n");
+        else{
+        printf("as duas cartas tem a mesma densidade populacional!\n");
+        }
+      
+      
+}
+
+
+switch (atributocomparacao) {
+   
+  case 5:
+        printf("pib percapita\n");
+        if (pibpercapita1 > pibpercapita2)
+        printf("a carta 1 tem maior pib percapita!\n");
+        else if (pibpercapita2 > pibpercapita1)
+        printf("a carta 2 tem maior pibpercapita!\n");
+        else{
+        printf("as duas cartas tem o mesmo pibpercapita!\n");
+        }
+      
+      
+}
+
 
    switch (atributocomparacao) {
    
-    case 7:
+    case 6:
           printf("super poder\n");
           if (superpoder1 > superpoder2)
           printf("a carta 1 tem maior super poder!\n");
