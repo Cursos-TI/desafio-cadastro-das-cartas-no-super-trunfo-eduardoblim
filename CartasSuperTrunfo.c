@@ -68,17 +68,19 @@ int main(){
      printf("digite pontos turisticos 1:\n");
      scanf(" %d", &numerodepontosturisticos1);
 
-     //calculo da carta 1.
+      //calculo da carta 1.
 
+      // calculo da densidade populacional, dividindo a populacao pela area.
      densidadepopulacional1 = (float) (populacao1 / area1);
-
+     
+      // calculo do pib per capita, dividindo o pib pela populacao.
      pibpercapita1 = (float) (pib1 / populacao1);
 
 
-
+      // inverso da densidade populacional, se a densidade for maior que 0, calcula o inverso, caso contrario atribui 0.
      inversodensidadepopulacional1 = (densidadepopulacional1 > 0)?(1/densidadepopulacional1): 0;
 
-
+      // calculo do super poder da carta 1.
      superpoder1 = populacao1 + area1 + pib1 + (float)numerodepontosturisticos1 + 
      pibpercapita1 + inversodensidadepopulacional1;
 
@@ -110,22 +112,24 @@ int main(){
    printf("digite o numero de pontos turisticos da cidade 2:\n");
    scanf(" %d", &numerodepontosturisticos2);
 
-   // calculo da carta 2.
+    // calculo da carta 2.
 
+    // calculo da densidade populacional, dividindo a populacao pela area. 
    densidadepopulacional2 = (float) (populacao2 / area2);
 
+    // calculo do pib per capita, dividindo o pib pela populacao,
    pibpercapita2 = (float) (pib2 / populacao2);
 
-
+    // inverso da densidade populacional, se a densidade for maior que 0, calcula o inverso, caso contrario atribui 0.
    inversodensidadepopulacional2 = (densidadepopulacional2 > 0)? (1/densidadepopulacional2): 0;
-
-
+  
+   // calculo do super poder da carta 2.
+   // o super poder e a soma de todos os atributos da carta 2.
    superpoder2 = populacao2 + area2 + pib2 + (float)numerodepontosturisticos2 +
    pibpercapita2 + inversodensidadepopulacional2;
 
   
-   // abaixo estao os printf da carta 1 para serem exibidas os dados da carta 1 na tela.
-   
+   // cada printf exibe um atributo da carta 1.
   printf("\n dados da carta 1 \n");
 
    printf("estado: %c\n", estado1);
@@ -149,9 +153,7 @@ int main(){
    printf("super poder: %.3Lf pontos\n", superpoder1);
 
 
-
-  // abaixo estao os printf da carta 2 para serem exibidos os dados da carta 2 na tela.
- 
+  // cada printf exibe um atributo da carta 2.
    printf("\n dados da carta 2 \n");
 
    printf("estado: %c\n", estado2);
@@ -180,6 +182,7 @@ int main(){
    // logica de combate entre carta1 e carta2;
 
    printf("escolha uma atributo para ser comparado:\n");
+   // menu de comparacao de atrubutos
 
    printf("1. populacao\n");
    printf("2. area\n");
@@ -188,11 +191,12 @@ int main(){
    printf("5. pibpercapita\n");
    printf("6. superpoder\n");
 
-   
    scanf(" %d", &atributocomparacao);
-
+   // switch case para comparar os atributos selecionados pelo usuario.
    switch (atributocomparacao) {
 
+    // comparacao dos atributos usando switch case.
+    // cada case representa um atributo diferente. 
     case 1:
           printf("populacao\n");
           if (populacao1 > populacao2)
@@ -200,7 +204,7 @@ int main(){
           else if (populacao2 > populacao1)
           printf("a carta 2 tem maior populacao!\n");
           else{
-           printf("as duas cartas tem a mesmo populacao!\n");
+           printf("as cartas empataram!\n");
     }
 
    }
@@ -211,11 +215,11 @@ int main(){
     case 2:
           printf("area\n");
           if (area1 > area2)
-          printf("a carta 1 tem maior area!\n");
+          printf("a carta 1 venceu, tem maior area!\n");
           else if (area2 > area1)
-          printf("a carta 2 tem maior arae!\n");
+          printf("a carta 2 venceu, tem maior arae!\n");
           else{
-          printf("as duas cartas tem a mesma area!\n");
+          printf("as cartas empataram!\n");
           }
         
         
@@ -230,7 +234,7 @@ switch (atributocomparacao) {
         else if (numerodepontosturisticos2 > numerodepontosturisticos1)
         printf("a carta 2 tem mais pontos turisticos!\n");
         else{
-        printf("as duas cartas tem o mesmo numero de pontos turisticos!\n");
+        printf("as cartas empataram!\n");
         }
         
 }
@@ -241,11 +245,11 @@ switch (atributocomparacao) {
   case 4:
         printf("densidade populacional\n");
         if (densidadepopulacional1 > densidadepopulacional2)
-        printf("a carta 1 tem maior densidade populacional!\n");
+        printf("a carta 1 prdeu!\n");
         else if (densidadepopulacional2 > densidadepopulacional1)
-        printf("a carta 2 tem maior densidadepopulacional!\n");
+        printf("a carta 2 perdeu!\n");
         else{
-        printf("as duas cartas tem a mesma densidade populacional!\n");
+        printf("as cartas empataram!\n");
         }
       
       
@@ -261,7 +265,7 @@ switch (atributocomparacao) {
         else if (pibpercapita2 > pibpercapita1)
         printf("a carta 2 tem maior pibpercapita!\n");
         else{
-        printf("as duas cartas tem o mesmo pibpercapita!\n");
+        printf("as cartas empataram!\n");
         }
       
       
@@ -277,7 +281,7 @@ switch (atributocomparacao) {
           else if (superpoder2 > superpoder1)
           printf("a carta 2 tem maior super poder!\n");
           else{
-          printf("as duas cartas tem o mesmo super poder!\n");
+          printf("as cartas empataram!\n");
           }
         
         
